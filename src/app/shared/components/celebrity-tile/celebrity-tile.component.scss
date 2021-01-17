@@ -1,0 +1,39 @@
+.celebrity-tile {
+    width: 250px;
+    height: 280px;
+    background-position: center;
+    background-image: url("https://colombiacheck.s3.us-east-2.amazonaws.com/colcheck/s3fs-public/2018-12/Perfil%20Iván%20Cepeda%20NR.jpg?IYcBW2e8iTSghpdxoa6II7wudefsSA1q");
+
+    &__wrapper {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 15%;
+        left: 5%;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &__time-category {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-size: 15px;
+        width: 220px;
+    }
+
+    &__vote-wrapper {
+        margin-top: 10px;
+
+        .separation {
+            margin-right: 5px;
+        }
+    }
+}
+

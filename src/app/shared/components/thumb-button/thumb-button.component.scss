@@ -1,0 +1,13 @@
+.thumb-button {
+    border: unset;
+    color: white;
+    padding: 4px;
+
+    &.thumbs-up {
+        background-color: #1cbbb4;
+    }
+
+    &.thumbs-down {
+        background-color: #ffad1d;
+    }
+}
