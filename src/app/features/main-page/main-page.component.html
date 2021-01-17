@@ -1,1 +1,13 @@
-<celebrity-tile></celebrity-tile>
+<div class="main-page">
+    <ng-container *ngFor="let celebrity of celebrities">
+        <celebrity-tile
+            *ngIf="!celebrity.isHeader && celebrity.category && celebrity.timeInCategory"
+            class="main-page__tile"
+            [category]="celebrity.category"
+            [description]="celebrity.description"
+            [imageLink]="celebrity.imageLink"
+            [name]="celebrity.name"
+            [timeInCategory]="celebrity.timeInCategory">
+        </celebrity-tile>
+    </ng-container>
+</div>

@@ -1,4 +1,4 @@
-<button class="vote-button">
+<button class="vote-button" (click)="onClick()">
     <div *ngIf="isVoteAgain">Vote again</div>
     <div *ngIf="!isVoteAgain">Vote now</div>
 </button>

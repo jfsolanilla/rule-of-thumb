@@ -1,0 +1,15 @@
+.main-page {
+    display: grid;
+    justify-content: center;
+
+    &__tile {
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    @media only screen and (min-width: 720px) {
+        grid-template-columns: 50% 50%;
+        margin: 0 auto;
+        width: 550px;
+    }
+}
