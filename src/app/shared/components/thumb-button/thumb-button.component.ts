@@ -14,9 +14,5 @@ export class ThumbButtonComponent implements OnInit {
   faThumbsDown = faThumbsDown;
   faThumbsUp = faThumbsUp;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit() {}
 }

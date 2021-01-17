@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CelebrityTileComponent } from './shared/components/celebrity-tile/celebrity-tile.component';
+import { MainPageComponent } from './features/main-page/main-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: CelebrityTileComponent
+    component: MainPageComponent
   }
 ];
 

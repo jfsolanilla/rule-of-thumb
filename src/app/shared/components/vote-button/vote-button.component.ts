@@ -8,9 +8,5 @@ import { Component, Input, OnInit } from '@angular/core';
 export class VoteButtonComponent implements OnInit {
   @Input() isVoteAgain = false;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit() {}
 }
