@@ -2,22 +2,25 @@
     [ngStyle]="{ 'background-image': 'url(' + imageLink + ')' }"
     class="celebrity-tile">
     <div class="celebrity-tile__wrapper">
-        <div class="celebrity-tile__title">
-            {{ name }}
-        </div>
-        <div class="celebrity-tile__time-category">
-            <strong>{{ getElapsedMonths(timeInCategory) }} ago</strong> in {{ category }}
-        </div>
-        <p class="celebrity-tile__description">
-            {{ description }}
-        </p>
-        <p *ngIf="hasVoted" class="celebrity-tile__vote-notification">Thank you for voting!</p>
-        <div class="celebrity-tile__vote-wrapper">
-            <div *ngIf="!hasVoted" class="celebrity-tile__thumb-wrapper separation">
-                <thumb-button class="separation"></thumb-button>
-                <thumb-button [isUp]="false"></thumb-button>
+        <div class="celebrity-tile__info">
+            <div class="celebrity-tile__title">
+                {{ name }}
             </div>
-            <vote-button [isVoteAgain]="hasVoted" (hasVoted)="onVoted($event)"></vote-button>
+            <div class="celebrity-tile__time-category">
+                <strong>{{ getElapsedMonths(timeInCategory) }} ago</strong> in {{ category }}
+            </div>
+            <p class="celebrity-tile__description">
+                {{ description }}
+            </p>
+            <p *ngIf="hasVoted" class="celebrity-tile__vote-notification">Thank you for voting!</p>
+            <div class="celebrity-tile__vote-wrapper">
+                <div *ngIf="!hasVoted" class="celebrity-tile__thumb-wrapper separation">
+                    <thumb-button class="separation"></thumb-button>
+                    <thumb-button [isUp]="false"></thumb-button>
+                </div>
+                <vote-button [isVoteAgain]="hasVoted" (hasVoted)="onVoted($event)"></vote-button>
+            </div>
         </div>
+        <vote-progress-bar [upPercentage]="upPercentage" [downPercentage]="downPercentage"></vote-progress-bar>
     </div>
 </div>

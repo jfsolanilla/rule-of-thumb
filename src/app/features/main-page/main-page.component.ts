@@ -12,12 +12,14 @@ import { VoteInfo } from 'src/app/core/interfaces/vote-info';
 })
 export class MainPageComponent implements OnInit {
   celebrities: Celebrity[];
+  celebrityHeader: Celebrity | undefined;
 
   constructor(
     private celebritiesService: CelebritiesService,
     private eventService: EventService
   ) {
     this.celebrities = [];
+    this.celebrityHeader = undefined;
   }
 
   ngOnInit() {
@@ -31,6 +33,7 @@ export class MainPageComponent implements OnInit {
   setCelebrities(): void {
     this.celebritiesService.get().subscribe((data: Celebrity[]) => {
       this.celebrities = data;
+      this.celebrityHeader = this.celebrities.find((celebrity: Celebrity) => celebrity.isHeader);
     });
   }
 
@@ -46,8 +49,30 @@ export class MainPageComponent implements OnInit {
           } else if (celebrity.numberOfDislikes && data.downVote) {
             celebrity.numberOfDislikes += 1;
           }
+
+          celebrity.upPercentage = this.getPercentage(celebrity, celebrity.numberOfLikes);
+          celebrity.downPercentage = 100 - celebrity.upPercentage;
         }
       });
     });
+  }
+
+  /**
+  * Gets percentage of votes
+  * @params celebrity - To get like and dislikes values
+  * @params value - Value to be checked
+  * @returns Percentage value
+  */
+  getPercentage(celebrity: Celebrity, value: number | undefined): number {
+    let result = -1;
+    let total: number;
+
+    if (value && celebrity && celebrity.numberOfLikes && celebrity.numberOfDislikes) {
+      total = celebrity.numberOfLikes + celebrity.numberOfDislikes;
+
+      result = Math.round(value*100/total);
+    }
+
+    return result;
   }
 }

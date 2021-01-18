@@ -6,7 +6,7 @@ export const celebritiesList = [
     closingTime: '2021-02-08',
     description: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam aliquet eu dui ut iaculis',
     id: 1,
-    imageLink: 'https://media.gettyimages.com/photos/pope-francis-visits-the-saint-louis-hospital-on-november-21-2019-in-picture-id1183683145?s=2048x2048',
+    imageLink: 'https://media.gettyimages.com/photos/pope-francis-leads-the-palm-sunday-mass-at-st-peters-square-on-march-picture-id516668230?s=2048x2048',
     isHeader: true,
     moreInfoLink: 'https://en.wikipedia.org/wiki/Pope_Francis',
     name: 'Pope Francis',
@@ -21,7 +21,9 @@ export const celebritiesList = [
     name: 'Kanye West',
     numberOfDislikes: 36,
     numberOfLikes: 64,
-    timeInCategory: '2020-10-10'
+    timeInCategory: '2020-10-10',
+    downPercentage: 36,
+    upPercentage: 64
   },
   {
     category: 'Business',
@@ -32,7 +34,9 @@ export const celebritiesList = [
     name: 'Mark Zuckerberg',
     numberOfDislikes: 64,
     numberOfLikes: 36,
-    timeInCategory: '2020-12-10'
+    timeInCategory: '2020-12-10',
+    downPercentage: 64,
+    upPercentage: 36
   },
   {
     category: 'Politics',
@@ -43,7 +47,9 @@ export const celebritiesList = [
     name: 'Cristina Fernández de Kirchner',
     numberOfDislikes: 64,
     numberOfLikes: 36,
-    timeInCategory: '2020-12-10'
+    timeInCategory: '2020-12-10',
+    downPercentage: 64,
+    upPercentage: 36
   },
   {
     category: 'Entertainment',
@@ -54,6 +60,8 @@ export const celebritiesList = [
     name: 'Malala Yousafzai',
     numberOfDislikes: 36,
     numberOfLikes: 64,
-    timeInCategory: '2020-12-10'
+    timeInCategory: '2020-12-10',
+    downPercentage: 36,
+    upPercentage: 64
   }
  ] as Celebrity[];

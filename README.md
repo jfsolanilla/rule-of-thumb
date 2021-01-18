@@ -1,27 +1,8 @@
 # RuleOfThumb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+TODO:
+* Icons and links to other pages: New components are needed to be created for the link views, also add the corresponding routed in rhe routes module.
+* For persisting user changes: This can be achieved by saving the data in local storage. However, the best way to achieve this, it’s to save data in a database that will provide other users voting data as well.
+* Validate if usr have selected up or down vote before let them click the Vote Now button.
+* In 'main-page.component.html': Send the whole celebrity object in 'celebrity-tile' instance and use it into the component
+* Polish header and celebrity tiles styles

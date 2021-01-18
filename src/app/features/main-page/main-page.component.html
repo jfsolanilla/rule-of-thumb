@@ -1,14 +1,27 @@
 <div class="main-page">
-    <ng-container *ngFor="let celebrity of celebrities">
-        <celebrity-tile
-            *ngIf="!celebrity.isHeader && celebrity.category && celebrity.timeInCategory"
-            class="main-page__tile"
-            [category]="celebrity.category"
-            [description]="celebrity.description"
-            [imageLink]="celebrity.imageLink"
-            [id]="celebrity.id"
-            [name]="celebrity.name"
-            [timeInCategory]="celebrity.timeInCategory">
-        </celebrity-tile>
-    </ng-container>
+    <celebrity-header
+        *ngIf="celebrityHeader && celebrityHeader.moreInfoLink && celebrityHeader.closingTime"
+        [description]="celebrityHeader.description"
+        [imageLink]="celebrityHeader.imageLink"
+        [name]="celebrityHeader.name"
+        [moreInfoLink]="celebrityHeader.moreInfoLink"
+        [closingTime]="celebrityHeader.closingTime">
+    </celebrity-header>
+    <div class="celebrities-tiles">
+        <ng-container *ngFor="let celebrity of celebrities">
+            <celebrity-tile
+                *ngIf="!celebrity.isHeader && celebrity.category && celebrity.timeInCategory &&
+                    celebrity.upPercentage && celebrity.downPercentage && celebrity.downPercentage"
+                class="main-page__tile"
+                [category]="celebrity.category"
+                [description]="celebrity.description"
+                [downPercentage]="celebrity.downPercentage"
+                [id]="celebrity.id"
+                [imageLink]="celebrity.imageLink"
+                [name]="celebrity.name"
+                [timeInCategory]="celebrity.timeInCategory"
+                [upPercentage]="celebrity.upPercentage">
+            </celebrity-tile>
+        </ng-container>
+    </div>
 </div>

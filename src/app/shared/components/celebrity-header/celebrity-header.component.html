@@ -1,0 +1,26 @@
+<div
+    [ngStyle]="{ 'background-image': 'url(' + imageLink + ')' }"
+    class="celebrity-header">
+    <div class="celebrity-header__wrapper">
+        <h5>What's your opinion on</h5>
+        <div class="celebrity-header__title">
+            {{ name }}?
+        </div>
+        <p class="celebrity-header__description">
+            {{ description }}
+        </p>
+        <a href="{{ moreInfoLink }}">
+          More Information
+        </a>
+        <p *ngIf="hasVoted" class="celebrity-header__vote-notification">Thank you for voting!</p>
+        <div class="celebrity-header__vote-wrapper">
+            <div *ngIf="!hasVoted" class="celebrity-header__thumb-wrapper separation">
+                <thumb-button class="separation"></thumb-button>
+                <thumb-button [isUp]="false"></thumb-button>
+            </div>
+        </div>
+        <div class="celebrity-header__time-category">
+          Closing in {{ getTimeRemaining() }}
+        </div>
+    </div>
+</div>

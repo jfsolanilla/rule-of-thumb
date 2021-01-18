@@ -1,0 +1,14 @@
+<div class="vote-progress-bar">
+    <span
+        [ngStyle]="{ 'width': upPercentage + '%' }"
+        class="vote-progress-bar__up-vote bar-styles">
+        <fa-icon [icon]="faThumbsUp"></fa-icon>
+        &nbsp;{{ upPercentage }} %
+    </span>
+    <span
+        [ngStyle]="{ 'width': downPercentage + '%' }"
+        class="vote-progress-bar__down-vote bar-styles">
+        <fa-icon [icon]="faThumbsDown"></fa-icon>
+        &nbsp;{{ downPercentage }} %
+    </span>
+</div>

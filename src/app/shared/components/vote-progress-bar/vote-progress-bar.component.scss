@@ -1,0 +1,20 @@
+.vote-progress-bar {
+    color: white;
+    display: flex;
+
+    &__up-vote {
+        background: #1cbbb4;
+        justify-content: flex-start;
+    }
+
+    &__down-vote {
+        background: #ffad1d;
+        justify-content: flex-end;
+    }
+
+    .bar-styles {
+        display: flex;
+        height: 20px;
+        padding: 2px;
+    }
+}

@@ -1,20 +1,26 @@
-.celebrity-tile {
-    margin: 0 auto;
-    width: 250px;
-    height: 280px;
+.celebrity-header {
     background-position: center;
     background-size: cover;
     display: flex;
+    height: 280px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
 
     &__wrapper {
-        display: flex;
-        flex-direction: column;
-        align-self: flex-end;
+        align-self: center;
+        background-color: rgb(123, 119, 116, 0.5);
+        color: white;
+        margin-left: 5%;
+        padding-left: 10px;
+        width: 38%;
     }
 
-    &__info {
-        color: white;
-        margin: 0 0 20px 10px;
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      &__wrapper {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
     }
 
     &__title {
@@ -43,10 +49,6 @@
         .separation {
             margin-right: 5px;
         }
-    }
-
-    @media only screen and (mind-width: 720px) {
-        margin: unset;
     }
 }
 

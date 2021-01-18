@@ -1,15 +1,13 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'vote-button',
   templateUrl: './vote-button.component.html',
   styleUrls: ['./vote-button.component.scss']
 })
-export class VoteButtonComponent implements OnInit {
+export class VoteButtonComponent {
   @Input() isVoteAgain = false;
   @Output() hasVoted: EventEmitter<boolean> = new EventEmitter();
-
-  ngOnInit() {}
 
   /**
   * On click actions

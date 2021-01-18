@@ -17,6 +17,8 @@ export class CelebrityTileComponent implements OnInit {
   @Input() id = -1;
   @Input() name = '';
   @Input() timeInCategory = '';
+  @Input() upPercentage = 0;
+  @Input() downPercentage = 0;
 
   isUpFocused = false;
   isDownFocused = false;

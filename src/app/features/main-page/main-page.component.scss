@@ -1,6 +1,7 @@
-.main-page {
+.celebrities-tiles {
     display: grid;
     justify-content: center;
+    row-gap: 20px;
 
     &__tile {
         margin-bottom: 20px;

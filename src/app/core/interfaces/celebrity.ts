@@ -10,4 +10,6 @@ export interface Celebrity {
   numberOfDislikes?: number;
   numberOfLikes?: number;
   timeInCategory?: string;
+  upPercentage?: number;
+  downPercentage?: number;
 }
