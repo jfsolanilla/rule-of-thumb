@@ -1,4 +1,7 @@
-<button class="thumb-button" [ngClass]="{ 'thumbs-up': isUp, 'thumbs-down': !isUp }">
+<button
+    [ngClass]="{ 'thumbs-up': isUp, 'thumbs-down': !isUp }"
+    (click)="onClick()"
+    class="thumb-button">
     <fa-icon *ngIf="!isUp" [icon]="faThumbsDown"></fa-icon>
     <fa-icon *ngIf="isUp" [icon]="faThumbsUp"></fa-icon>
 </button>
